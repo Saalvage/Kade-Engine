@@ -30,7 +30,8 @@ class StoryMenuState extends MusicBeatState
 		['Pico', 'Philly', "Blammed"],
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
-		['Senpai', 'Roses', 'Thorns']
+		['Senpai', 'Roses', 'Thorns'],
+		['I', 'Hate', 'Soup Girl']
 	];
 	var curDifficulty:Int = 1;
 
@@ -43,7 +44,8 @@ class StoryMenuState extends MusicBeatState
 		['pico', 'bf', 'gf'],
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['senpai', 'bf', 'gf'],
+		['bf', 'bf', 'spooky']
 	];
 
 	var weekNames:Array<String> = [
@@ -53,7 +55,8 @@ class StoryMenuState extends MusicBeatState
 		"PICO",
 		"MOMMY MUST MURDER",
 		"RED SNOW",
-		"hating simulator ft. moawling"
+		"hating simulator ft. moawling",
+		"Vore"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -71,6 +74,7 @@ class StoryMenuState extends MusicBeatState
 	var sprDifficulty:FlxSprite;
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
+	var test:FlxSprite;
 
 	override function create()
 	{
@@ -201,6 +205,13 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
+
+		test = new FlxSprite(0, leftArrow.y + 10);
+		test.frames = ui_tex;
+		test.animation.addByPrefix('idle', 'arrow right');
+		test.animation.addByPrefix('press', "arrow push right", 24, false);
+		test.animation.play('idle');
+		add(test);
 
 		trace("Line 150");
 

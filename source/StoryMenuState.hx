@@ -31,21 +31,21 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['I', 'Hate', 'Soup Girl']
+		['I', 'Hate', 'Soup Girl', 'Very Much']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, false];
 
 	var weekCharacters:Array<Dynamic> = [
+		['', 'bf', 'gf'],
 		['dad', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
+		['spooky', 'bf', 'pico'],
+		['gf', 'bf', 'mom'],
+		['pico', 'bf', 'bf'],
 		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf'],
-		['bf', 'bf', 'spooky']
+		['senpai', 'pico', 'gf'],
+		['bf', 'bf', 'bf']
 	];
 
 	var weekNames:Array<String> = [

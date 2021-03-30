@@ -23,7 +23,8 @@ class Note extends FlxSprite
 	public var prevNote:Note;
 
 	public var sustainLength:Float = 0;
-	public var isSustainNote:Bool = false;
+	public var isSustainNote(default, null):Bool = false;
+	public var isEndNote(default, null):Bool = false;
 
 	public var noteScore:Float = 1;
 
@@ -139,8 +140,10 @@ class Note extends FlxSprite
 		}
 
 		
-		if (isSustainNote && prevNote != null)
+		if (isSustainNote)
 		{
+			isEndNote = true;
+
 			noteScore * 0.2;
 			alpha = 0.6;
 
@@ -167,6 +170,7 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
+				prevNote.isEndNote = false;
 				switch (prevNote.noteData)
 				{
 					case 0:

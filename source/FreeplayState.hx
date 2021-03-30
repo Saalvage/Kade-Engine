@@ -72,6 +72,8 @@ class FreeplayState extends MusicBeatState
 			
 			addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
 
+			addWeek(['Rock-The-Dead'], 7, ['mom']);
+
 		// LOAD MUSIC
 
 		// LOAD CHARACTERS

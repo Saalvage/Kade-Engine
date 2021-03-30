@@ -109,26 +109,6 @@ At the moment, you can optionally fix the transition bug in songs with zoomed ou
 **As of version 1.3**, you also need Discord RPC to compile the game, get it by using the following command:
 - Use `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` in the terminal/command-prompt.
 
-### Ignored files
-
-I gitignore the API keys for the game, so that no one can nab them and post fake highscores on the leaderboards. But because of that the game
-doesn't compile without it.
-
-Just make a file in `/source` and call it `APIStuff.hx`, and copy paste this into it
-
-```haxe
-package;
-
-class APIStuff
-{
-	public static var API:String = "";
-	public static var EncKey:String = "";
-}
-
-```
-
-and you should be good to go there.
-
 ### Compiling game
 
 Once you have all those installed, it's pretty easy to compile the game. You just need to run 'lime test html5 -debug' in the root of the project to build and run the HTML5 version. (command prompt navigation guide can be found here: [https://ninjamuffin99.newgrounds.com/news/post/1090480](https://ninjamuffin99.newgrounds.com/news/post/1090480))
